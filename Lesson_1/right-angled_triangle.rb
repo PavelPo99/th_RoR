@@ -7,9 +7,8 @@ b = gets.chomp.to_f
 puts "Введите третью сторону треугольника: "
 c = gets.chomp.to_f
 
-hypotenuse = [a, b, c].sort[2]
-catheter_1 = [a, b, c].sort[0]
-catheter_2 = [a, b, c].sort[1]
+sides = [a, b, c].sort
+hypotenuse, catheter_1, catheter_2 = sides
 
 if catheter_1 ** 2 + catheter_2 ** 2 == hypotenuse ** 2
   puts "Данный треугольник: прямоугольный"
