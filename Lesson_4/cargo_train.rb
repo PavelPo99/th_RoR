@@ -1,8 +1,7 @@
-require_relative "train"
-
 class CargoTrain < Train
   
   def initialize(id_train)
-    super(id_train, 'cargo')
+    @type_train = :cargo
+    super(id_train, type_train)
   end
 end

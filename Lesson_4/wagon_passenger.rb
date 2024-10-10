@@ -1,6 +1,7 @@
 class WagonPassenger < Wagon
 
-  def initialize(id_wagon)
-    super(id_wagon, 'passenger')
+  def initialize
+    @type = :passenger
+    super
   end
 end

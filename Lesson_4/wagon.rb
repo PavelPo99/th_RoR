@@ -1,9 +1,7 @@
 class Wagon
-  attr_reader :type, :id_wagon
+  attr_reader :type
   
-  def initialize(id_wagon, type)
-    @id_wagon = id_wagon
-    @type = type
+  def initialize
   end
 end
 
