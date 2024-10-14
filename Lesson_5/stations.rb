@@ -9,7 +9,6 @@ class Station
 
   def initialize(name_station)
     @@all_stations << self
-    @@instances += 1
     @name_station = name_station
     @trains = []
     register_instance

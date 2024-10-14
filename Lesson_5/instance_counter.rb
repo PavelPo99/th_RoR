@@ -15,24 +15,5 @@ module InstanceCounter
     def register_instance
       self.class.instances = (self.class.instances || 0) + 1
     end
-
   end
-
-
-  # module ClassMethods 
-  #   def instances 
-  #     @instances ||= 0
-  #   end 
-  #   def increment_instance_count 
-  #     @instances = instances + 1
-  #   end end
-
-  # module InstanceMethods
-  #   private
-
-  #   def register_instance 
-  #     self.class.increment_instance_count
-  #   end
-  # end
-
 end
