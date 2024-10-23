@@ -11,7 +11,6 @@ class Train
   NUM_TRAIN = /^\w{3}(-|\s)\w{2}$/
 
   def initialize(id_train, type_train)
-    
     @id_train = id_train
     @type_train = type_train
     validate!
