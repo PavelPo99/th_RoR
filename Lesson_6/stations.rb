@@ -8,11 +8,11 @@ class Station
   @@all_stations = []
 
   def initialize(name_station)
-    @@all_stations << self
     @name_station = name_station
+    validate!
+    @@all_stations << self
     @trains = []
     register_instance
-    validate!
   end
 
   def add_train_on_station(train)
