@@ -163,7 +163,7 @@ class Main
 
     loop do
       puts "\n1. Посмотреть маршрутную карту.\n2. Переместить поезд на следующую станцию.
-            \n3. Переместить поезд на предыдущую станцию.\n0. Выйти"
+            3. Переместить поезд на предыдущую станцию.\n0. Выйти"
       gets_job = gets.chomp.to_i
 
       case gets_job
@@ -171,12 +171,10 @@ class Main
         current_train(num_train).show_stations.each { |station| print "#{station.name_station} - " }
       when 2
         current_train(num_train).move_forward
-        puts "Поезд #{current_train(num_train).id_train} находится на станции:
-              #{current_train(num_train).current_station.name_station}"
+        puts "Поезд #{current_train(num_train).id_train} находится на станции: #{current_train(num_train).current_station.name_station}"
       when 3
         current_train(num_train).move_backward
-        puts "Поезд #{current_train(num_train).id_train} находится на станции:
-              #{current_train(num_train).current_station.name_station}"
+        puts "Поезд #{current_train(num_train).id_train} находится на станции: #{current_train(num_train).current_station.name_station}"
       when 0
         break
       else
@@ -228,8 +226,8 @@ class Main
       puts 'Для создания маршрута, напишите начальную станцию:'
       starting_station = gets.chomp.to_s
       puts 'Затем конечную станцию:'
-      gets.chomp.to_s
-      @routes << Route.new(starting_station, ending_station0)
+      ending_station = gets.chomp.to_s
+      @routes << Route.new(starting_station, ending_station)
       puts "\nСоздан маршрут: #{@routes.last.stations.first.name_station}-#{@routes.last.stations.last.name_station}"
     rescue RuntimeError => e
       puts e
@@ -382,7 +380,7 @@ class Main
         list_train_wagons(num_train)
 
         puts "\nВыберите действие:\n1. Заполнить вагон.\n2. Показать занятый объем.
-              \n3. Показать свободный объем."
+              3. Показать свободный объем."
         choice = gets.chomp.to_i
 
         case choice
@@ -404,7 +402,7 @@ class Main
         list_train_wagons(num_train)
 
         puts "\nВыберите действие:\n1. Занять место в вагоне.\n2. Показать кол-во занятых мест в вагоне.
-              \n3. Показать кол-во свободных мест в вагоне."
+              3. Показать кол-во свободных мест в вагоне."
         choice = gets.chomp.to_i
 
         case choice
